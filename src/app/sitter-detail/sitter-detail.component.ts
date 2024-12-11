@@ -7,6 +7,8 @@ import {AgePipe} from '../pipes/age.pipe';
 import {ExperiencePipe} from '../pipes/experience.pipe';
 import {RatingPipe} from '../pipes/rating.pipe';
 import {SitterStatusDirective} from '../directives/sitter-status.directive';
+import {HighlightDirective} from '../directives/highlight.directive';
+
 
 @Component({
   selector: 'app-sitter-detail',
@@ -18,6 +20,8 @@ import {SitterStatusDirective} from '../directives/sitter-status.directive';
     AgePipe,
     ExperiencePipe,
     RatingPipe,
+    SitterStatusDirective,
+    HighlightDirective,
     SitterStatusDirective
   ],
   standalone: true

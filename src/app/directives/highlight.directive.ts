@@ -1,17 +1,16 @@
-import { Directive, ElementRef, HostListener, Renderer2 } from '@angular/core';
-
+// highlight.directive.ts
+import {Directive, ElementRef, Renderer2, HostListener, Input} from '@angular/core';
 @Directive({
   standalone: true,
   selector: '[appHighlight]'
 })
 export class HighlightDirective {
-  constructor(private el: ElementRef, private renderer: Renderer2) {}
-
+  constructor(private el: ElementRef, private renderer: Renderer2) { }
+  //Listen for mouseenter and mouseleave events
   @HostListener('mouseenter') onMouseEnter() {
-    this.renderer.addClass(this.el.nativeElement, 'highlight');
+    this.renderer.setStyle(this.el.nativeElement, 'backgroundColor', 'yellow'); // Highlight the name on hover
   }
-
   @HostListener('mouseleave') onMouseLeave() {
-    this.renderer.removeClass(this.el.nativeElement, 'highlight');
+    this.renderer.removeStyle(this.el.nativeElement, 'backgroundColor'); // Remove highlight when hover ends
   }
 }
