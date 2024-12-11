@@ -4,6 +4,9 @@ import { PetSitter} from '../Shared/pet-sitter';
 import {RouterLink} from '@angular/router';
 import {NgForOf} from '@angular/common';
 import {FormsModule} from '@angular/forms';
+import {AgePipe} from '../pipes/age.pipe';
+import {ExperiencePipe} from '../pipes/experience.pipe';
+import {RatingPipe} from '../pipes/rating.pipe';
 
 @Component({
   selector: 'app-sitter-list',
@@ -12,7 +15,10 @@ import {FormsModule} from '@angular/forms';
   imports: [
     RouterLink,
     NgForOf,
-    FormsModule
+    FormsModule,
+    AgePipe,
+    ExperiencePipe,
+    RatingPipe
   ],
   standalone: true
 })
