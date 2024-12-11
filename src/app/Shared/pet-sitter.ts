@@ -1,0 +1,11 @@
+//Interface with all needed propeties for a PetSitter
+export interface PetSitter {
+  id: number;
+  name: string;
+  age: number;
+  experience: number;
+  rating: number; // 1 to 5 Stars
+  specialty: string; //"Cats", "Dogs", etc.nnnnnn
+  available: boolean;
+  photo?: string; //URL to a photo
+}
