@@ -8,7 +8,8 @@
     <p><strong>Experience:</strong> {{ sitter.experience |experience}} years</p>
     <p><strong>Specialty:</strong> {{ sitter.specialty }}</p>
     <p><strong>Rating:</strong> {{ sitter.rating|rating }}</p>
-    <p><strong>Availability:</strong> {{ sitter.available ? 'Available' : 'Unavailable' }}</p>
+    <p><strong>Availability:</strong> <span [appSitterStatus]="sitter.available"></span></p>
+
   </div>
 
   <div class="sitter-photo" *ngIf="sitter.photo">

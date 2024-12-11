@@ -7,6 +7,7 @@ import {FormsModule} from '@angular/forms';
 import {AgePipe} from '../pipes/age.pipe';
 import {ExperiencePipe} from '../pipes/experience.pipe';
 import {RatingPipe} from '../pipes/rating.pipe';
+import {HighlightDirective} from '../directives/highlight.directive';
 
 @Component({
   selector: 'app-sitter-list',
@@ -18,7 +19,8 @@ import {RatingPipe} from '../pipes/rating.pipe';
     FormsModule,
     AgePipe,
     ExperiencePipe,
-    RatingPipe
+    RatingPipe,
+    HighlightDirective
   ],
   standalone: true
 })

@@ -25,7 +25,7 @@
   <div *ngFor="let sitter of filteredSitters" class="sitter-card">
     <h3>{{ sitter.name }}</h3>
     <p>Specialty: {{ sitter.specialty }}</p>
-    <p>Rating: {{ sitter.rating }}</p>
+    <p>Rating: {{ sitter.rating|rating }}</p>
     <a [routerLink]="'/sitters/' + sitter.id">View Details</a>
   </div>
 </div>
